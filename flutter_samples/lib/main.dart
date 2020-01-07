@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_samples/scene/TitleWidget.dart';
+import 'package:flutter_samples/scene/title/TitleWidget.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,11 +1,10 @@
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_samples/scene/TitleBLoC.dart';
+import 'package:flutter_samples/scene/title/TitleBLoC.dart';
 
-class TitleWidget extends StatelessWidget {
+class QuizWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +14,16 @@ class TitleWidget extends StatelessWidget {
         body: BlocBuilder<TitleBLoC, int>(
           builder: (context, state){
             return Center(
-              child: Text("Title"),
+              child: Column(
+                mainAxisSize: MainAxisSize.min, ///
+                children: <Widget>[
+                  Text("問題"),
+                ],
+              ),
             );
           },
         ),
       ),
     );
   }
-
 }
