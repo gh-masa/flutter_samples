@@ -1,6 +1,4 @@
-
 import 'package:bloc/bloc.dart';
-
 
 class TitleBLoC extends Bloc<Map<String, dynamic>, int> {
   @override
@@ -12,5 +10,4 @@ class TitleBLoC extends Bloc<Map<String, dynamic>, int> {
     // TODO: implement mapEventToState
     return null;
   }
-
 }
