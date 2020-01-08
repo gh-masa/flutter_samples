@@ -8,21 +8,56 @@ class QuizWidget extends StatelessWidget {
     return BlocProvider(
       create: (BuildContext context) => TitleBLoC(),
       child: Scaffold(
+        appBar: AppBar(
+          title: Text('Basic AppBar'),
+        ),
+        drawer: Drawer(),
         body: BlocBuilder<TitleBLoC, int>(
           builder: (context, state) {
-            return Center(
+            return SafeArea(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-
-                ///
                 children: <Widget>[
                   Container(
-                    height: 100.0,
+                    height: 240.0,
                     width: double.infinity,
-                    color: Colors.red,
+                    color: Colors.amber,
+                    child: Center(
+                      child: Text("問題領域"),
+                    ),
                   ),
-                  Text("問題"),
-                  Text("問題"),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Container(
+                        height: 88.0,
+                        width: double.infinity,
+                        color: Colors.greenAccent,
+                        child: FlatButton(
+                          child: Text("Button"),
+                          onPressed: () {},
+                        ),
+                      ),
+                      Container(
+                        height: 88.0,
+                        width: double.infinity,
+                        color: Colors.lightGreen,
+                        child: FlatButton(
+                          child: Text("Button"),
+                          onPressed: () {},
+                        ),
+                      ),
+                      Container(
+                        height: 88.0,
+                        width: double.infinity,
+                        color: Colors.green,
+                        child: FlatButton(
+                          child: Text("Button"),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             );
